@@ -86,21 +86,19 @@ class StringTest < Minitest::Test
   end
 
   def test_length
-    skip
-    assert_equal __, "".length
-    assert_equal __, "A".length
-    assert_equal __, "Ø".length
-    assert_equal __, "\n".length
-    assert_equal __, "AA".length
-    assert_equal __, "AAA".length
-    assert_equal __, "AAAA".length
-    assert_equal __, "     ".length
+    assert_equal 0, "".length
+    assert_equal 1, "A".length
+    assert_equal 1, "Ø".length
+    assert_equal 1, "\n".length
+    assert_equal 2, "AA".length
+    assert_equal 3, "AAA".length
+    assert_equal 4, "AAAA".length
+    assert_equal 5, "     ".length
   end
 
   def test_count
-    skip
-    assert_equal __, "sound of fury signifying nothing".count('o')
-    assert_equal __, "David Cook is frankly unkind".count('aeiou')
+    assert_equal 3, "sound of fury signifying nothing".count('o')
+    assert_equal 8, "David Cook is frankly unkind".count('aeiou')
   end
 
   def test_shovel
